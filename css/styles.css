@@ -1,0 +1,46 @@
+body {
+	margin: 0;
+	font-family: "Montserrat", sans-serif;
+}
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 9vh;
+	padding-top: 1vh;
+	display: flex;
+	align-items: center;
+	justify-content: center; 
+}
+header > img {
+	height: 8vh;
+}
+.mainContent {
+	display: flex;
+	flex-direction: column;
+}
+h1, h2, h3 {
+	margin: 0;
+}
+div {
+	width: 100%;
+}
+div > div {
+	height: 100vh;
+}
+div:nth-child(odd) {
+	background-color: #F4EAE0;
+}
+div:nth-child(even) {
+	background-color: #FAF6F0;
+}
+div:nth-child(6) {
+	height: 70vh;
+}
+footer {
+	width: 100%;
+	height: 30vh;
+	background-color: black;
+	flex: 0 0 auto;
+}
