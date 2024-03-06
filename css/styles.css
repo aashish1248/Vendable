@@ -41,7 +41,7 @@ div:nth-child(even) {
 	width: 25vw;
 	height: 94vh;
 	z-index: 0;
-	background-image: url("../images/phone1.png");
+	background-image: url("../images/phone.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 	transform: rotate(-40deg);
@@ -79,7 +79,7 @@ div:nth-child(even) {
     margin: auto;
     margin-top: 5%;
     height: 55%;
-    width: 25%;
+    width: 40%;
     border: 2px solid #434242;
     box-shadow: 0.37em 0.37em 0.31em #434242;
     border-radius: 50px;
@@ -89,31 +89,19 @@ div:nth-child(even) {
     background-color: red;
     z-index: 0;
     left: 5%;
-    filter: blur(5px);
-}
-#review2 {
-    background-color: orange;
-    z-index: 1;
-    left: 20%;
     filter: blur(3px);
 }
-#review3 {
+#review2 {
     z-index: 2;
     left: 50%;
     background-color: white;
     transform: translateX(-50%);
 }
-#review4 {
-    z-index: 1;
-    background-color: yellow;
-    right: 20%;
-    filter: blur(3px);
-}
-#review5 {
+#review3 {
     background-color: blue;
     z-index: 0;
     right: 5%;
-    filter: blur(5px);
+    filter: blur(3px);
 }
 .page6 img {
 	position: relative;
@@ -123,25 +111,13 @@ div:nth-child(even) {
 	border-radius: 50%;
 	z-index: 3;
 }
-#profile1 {
-	width: 3em;
-	height: 3em;
+#profile1, #profile3 {
+	width: 4em;
+	height: 4em;
 }
 #profile2 {
-	width: 4em;
-	height: 4em;
-}
-#profile3 {
 	width: 5em;
 	height: 5em;
-}
-#profile4 {
-	width: 4em;
-	height: 4em;
-}
-#profile5 {
-	width: 3em;
-	height: 3em;
 }
 div:nth-child(8) {
 	height: 70vh;
@@ -151,4 +127,63 @@ footer {
 	height: 30vh;
 	background-color: black;
 	flex: 0 0 auto;
+}
+.page2 {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+}
+.page2 > section {
+	flex-basis: 20%;
+	margin-left: 3%;
+	margin-right: 3%;
+	margin-top: 4%;
+}
+.page2 > section > img {
+	width: 14em;
+	height: 14em;
+	border: 1px solid black;
+}
+.page2 > section > span {
+	display: block;
+}
+div:nth-child(2), div:nth-child(4){
+	text-align: center;
+}
+#page2h1 {
+	padding-top: 5%;
+	font-size: 2.8em;
+}
+#page2h2 {
+	font-size: 2em;
+}
+.page3 {
+	display: flex;
+	width: 90%;
+	height: 100%;
+	flex-direction: row;
+	text-align: left;
+	align-items: center;
+	margin: auto;
+	margin-top: 2%;
+}
+.page3 > img {
+	flex-basis: 50%;
+	border: 1px solid black;
+	height: 70%;
+}
+.page3 > section {
+	padding-left: 5%;
+	flex-basis: 50%;
+}
+.page3 > section > button {
+	margin-top: 2%;
+	width: 10em;
+	height: 4em;
+	cursor: pointer;
+}
+#page4h1 {
+	padding-top: 5%;
+	font-size: 2.8em;
 }
