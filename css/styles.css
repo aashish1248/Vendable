@@ -6,6 +6,7 @@ header {
 	position: fixed;
 	top: 0;
 	left: 0;
+	z-index: 1;
 	width: 100%;
 	height: 9vh;
 	padding-top: 1vh;
@@ -21,7 +22,7 @@ header > img {
 	flex-direction: column;
 }
 h1, h2, h3 {
-	margin: 0;
+	margin: 0.5em 0.5em 0em 0em;
 }
 div {
 	width: 100%;
@@ -35,7 +36,114 @@ div:nth-child(odd) {
 div:nth-child(even) {
 	background-color: #FAF6F0;
 }
-div:nth-child(6) {
+.background {
+	position: absolute;
+	width: 25vw;
+	height: 94vh;
+	z-index: 0;
+	background-image: url("../images/phone1.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	transform: rotate(-40deg);
+	top: 0em;
+	left: 60em;
+	overflow-x: hidden;
+}
+.page1 {
+	position: absolute;
+	top: 25%;
+	left: 4%;
+}
+.page1 > h1 {
+	font-size: 5em;
+}
+.page1 > h2 {
+	font-size: 2.8em;
+}
+.page1 > h3 {
+	font-size: 2em;
+}
+.page1 > p {
+	font-size: 1.3em;
+}
+.page6 {
+	text-align: center;
+	width: 100%;
+	height: 100%;
+}
+.page6 > h1 {
+	padding-top: 5%;
+	font-size: 2.8em;
+}
+.page6 > section > section {
+    margin: auto;
+    margin-top: 5%;
+    height: 55%;
+    width: 25%;
+    border: 2px solid #434242;
+    box-shadow: 0.37em 0.37em 0.31em #434242;
+    border-radius: 50px;
+    position: absolute;
+}
+#review1 {
+    background-color: red;
+    z-index: 0;
+    left: 5%;
+    filter: blur(5px);
+}
+#review2 {
+    background-color: orange;
+    z-index: 1;
+    left: 20%;
+    filter: blur(3px);
+}
+#review3 {
+    z-index: 2;
+    left: 50%;
+    background-color: white;
+    transform: translateX(-50%);
+}
+#review4 {
+    z-index: 1;
+    background-color: yellow;
+    right: 20%;
+    filter: blur(3px);
+}
+#review5 {
+    background-color: blue;
+    z-index: 0;
+    right: 5%;
+    filter: blur(5px);
+}
+.page6 img {
+	position: relative;
+	top: 58%;
+	border: 2px outset #434242;
+	margin: 0.5em;
+	border-radius: 50%;
+	z-index: 3;
+}
+#profile1 {
+	width: 3em;
+	height: 3em;
+}
+#profile2 {
+	width: 4em;
+	height: 4em;
+}
+#profile3 {
+	width: 5em;
+	height: 5em;
+}
+#profile4 {
+	width: 4em;
+	height: 4em;
+}
+#profile5 {
+	width: 3em;
+	height: 3em;
+}
+div:nth-child(8) {
 	height: 70vh;
 }
 footer {
