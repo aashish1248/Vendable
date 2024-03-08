@@ -41,3 +41,17 @@ profile3.addEventListener("mouseleave", () => {
 	review2.style.filter = "blur(0px)";
 	review3.style.zIndex = "0";
 })
+
+const changeLogo = () => {
+    var scrollPosition = window.scrollY;
+    var pageHeight = window.innerHeight;
+    var currentPage = Math.floor(scrollPosition / pageHeight) + 1;
+    var logoChange;
+    if (currentPage % 2 === 0) {
+        logoChange = "./images/logo2.svg";
+    } else {
+        logoChange = "./images/logo4.svg";
+    }
+    document.getElementById("logo").src = logoChange;
+}
+window.addEventListener("scroll", changeLogo);
