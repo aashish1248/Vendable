@@ -242,6 +242,15 @@ div:nth-child(2), div:nth-child(4), div:nth-child(8) {
 	font-size: 2em;
 	color: #8B8589;
 }
+#page3h1 {
+	font-size: 4em;
+}
+#page3h2 {
+	font-size: 2.5em;
+}
+#page3h2 {
+	font-size: 2em;
+}
 .page3 {
 	display: flex;
 	width: 90%;
@@ -251,11 +260,14 @@ div:nth-child(2), div:nth-child(4), div:nth-child(8) {
 	align-items: center;
 	margin: auto;
 	margin-top: 2%;
+	color: white;
 }
 .page3 > img {
 	flex-basis: 50%;
-	border: 1px solid black;
+	max-width: 50%;
 	height: 70%;
+	border-radius: 0.3em;
+	box-shadow: 0 0 0.5em 1em #F6F5F5;
 }
 .page3 > section {
 	padding-left: 5%;
@@ -268,6 +280,7 @@ div:nth-child(2), div:nth-child(4), div:nth-child(8) {
 	cursor: pointer;
 	font-family: "Montserrat", sans-serif;
 	font-size: 1.1em;
+	border-radius: 0.3em;
 }
 #page4h1 {
 	padding-top: 5%;
@@ -295,8 +308,10 @@ div:nth-child(2), div:nth-child(4), div:nth-child(8) {
 	width: 90%;
 	height: 80%;
 	border: 1px solid black;
+	border-radius: 0.3em;
+	background-color: white;
 }
-.productgrid .productdescription {
+.productdescription {
 	position: relative;
 	height: 25%;
 	width: 100%;
@@ -304,6 +319,21 @@ div:nth-child(2), div:nth-child(4), div:nth-child(8) {
 	gap: 1em;
 	color: white;
 	background-color: black;
+	border-radius: 0.3em;
+	padding-top: 0.1em;
+}
+.description {
+	display: none;
+	padding-top: 0.5em;
+}
+.productdescription > span[id^="hover"] {
+	display: inline-block;
+	padding-top: 0.2em;
+}
+.productdescription > span {
+	padding-left: 1em;
+	padding-right: 1em;
+	text-align: justify;
 }
 .companiesgrid {
 	margin: auto;
