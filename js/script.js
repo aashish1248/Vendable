@@ -152,3 +152,16 @@ product6.addEventListener("mouseleave", () => {
 	description6.style.display = "none";
 	hover6.style.display = "inline-block";
 })
+
+var productssource = ["pic1.jpg", "pic2.jpg", "pic3.jpg", "pic4.jpg", "pic5.jpg"];
+var x = 1;
+const products = document.getElementById("products");
+const productsslide = () => {
+	products.src = `./images/${productssource[x]}`;
+	if (x < productssource.length - 1) {
+		x = x + 1;
+	} else {
+		x = 0;
+	}
+}
+setInterval(productsslide,3000);
