@@ -154,10 +154,13 @@ product6.addEventListener("mouseleave", () => {
 })
 
 var productssource = ["pic1.jpg", "pic2.jpg", "pic3.jpg", "pic4.jpg", "pic5.jpg"];
+var productsdescriptions = ["Echo Dot 3rd Generation", "Battery Doorbell Pro", "Casio FX-300ES Plus", "Digital Alarm Clock", "PS5 Standard Edition"];
 var x = 1;
 const products = document.getElementById("products");
+const descriptions = document.getElementById("productsdescription");
 const productsslide = () => {
 	products.src = `./images/${productssource[x]}`;
+	descriptions.innerText = productsdescriptions[x]; 
 	if (x < productssource.length - 1) {
 		x = x + 1;
 	} else {

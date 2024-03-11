@@ -5,21 +5,16 @@ body {
 header {
 	position: fixed;
 	top: 0;
-	left: 0;
 	z-index: 1;
 	width: 100%;
 	height: 9vh;
 	padding-top: 1vh;
-	display: flex;
-	align-items: center;
-	justify-content: center; 
 }
 header > img {
 	height: 8vh;
-}
-.mainContent {
-	display: flex;
-	flex-direction: column;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
 }
 h1, h2, h3 {
 	margin: 0.5em 0.5em 0em 0em;
@@ -32,9 +27,11 @@ div > div {
 }
 div:nth-child(odd) {
 	background-color: black;
+	overflow: hidden;
 }
 div:nth-child(even) {
 	background-color: #F5F5F7;
+	overflow: hidden;
 }
 .background {
 	position: absolute;
@@ -167,7 +164,8 @@ footer {
 	width: 80%;
 	height: 30vh;
 	display: grid;
-	grid-template-columns: 35% 15% 15% 35%;
+	grid-template-columns: 25% 15% 15% 45%;
+	grid-template-areas: "footer1 footer2 footer3 footer4";
 	padding-left: 10%;
 	padding-right: 10%;
 	background-color: black;
@@ -176,6 +174,7 @@ footer {
 	margin: auto;
 	color: white;
 	font-size: 0.7em;
+	grid-area: footer1;
 }
 #footer1 > img {
 	width: 3em;
@@ -183,15 +182,26 @@ footer {
 }
 #footer2 {
 	text-align: center;
+	color: white;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 13%;
+	grid-area: footer2;
 }
 #footer3 {
 	text-align: center;
+	color: white;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 13%;
+	grid-area: footer3;
 }
 #footer4 {
 	margin: auto;
 	color: white;
+	grid-area: footer4;
 }
-#footer4 > h2 {
+footer h2 {
 	font-size: 1em;
 }
 #footer4 > p {
@@ -258,11 +268,8 @@ div:nth-child(2), div:nth-child(4), div:nth-child(8) {
 #page3h1 {
 	font-size: 4em;
 }
-#page3h2 {
-	font-size: 2em;
-}
 #page3h3 {
-	font-size: 1.5em;
+	font-size: 1.6em;
 }
 .page3 {
 	display: flex;
@@ -285,6 +292,9 @@ div:nth-child(2), div:nth-child(4), div:nth-child(8) {
 .page3 > section {
 	padding-left: 5%;
 	flex-basis: 50%;
+}
+.page3 > section > p {
+	font-size: 1.2em;
 }
 .page3 > section > button {
 	margin-top: 2%;
@@ -362,15 +372,28 @@ div:nth-child(2), div:nth-child(4), div:nth-child(8) {
 	width: 90%;
 	height: 70%;
 	border: 1px solid black;
+	border-radius: 0.3em;
 }
 .companiesgrid .companiesdescription {
 	margin: auto;
 	position: relative;
-	height: 42%;
-	width: 65%;
-	bottom: 35%;
+	height: 32%;
+	width: 75%;
+	bottom: 22%;
 	color: white;
+	padding-left: 0.4em;
+	padding-right: 0.4em;
+	padding-top: 0.1em;
 	background-color: black;
+	border-radius: 0.3em;
+}
+.companiesdescription > p {
+	font-size: 0.9em;
+	margin-bottom: 0.5em;
+	margin-top: 0.5em;
+}
+.companiesdescription > span {
+	font-weight: 600;
 }
 .categorygrid {
 	margin: auto;
@@ -454,19 +477,231 @@ div:nth-child(2), div:nth-child(4), div:nth-child(8) {
 	display: grid;
 	gap: 1em;
 	grid-template-columns: 1fr 1fr;
+	grid-template-areas: "about productsslide";
 	color: white;
 }
 #about {
 	width: 100%;
 	height: 100%;
+	grid-area: about;
 }
-#productsslide >img {
+#products {
 	max-height: 70vh;
 	width: 100%;
 	height: 100%;
 	border-radius: 0.3em;
 	border: 1px solid black;
 }
+#productsslide {
+	position: relative;
+	grid-area: productsslide;
+}
+#productsdescription {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);	
+	bottom: 5%;
+	font-size: 1.5em;
+	font-weight: 500;
+	text-shadow: 0.07em 0.07em #B4B4B8;
+	color: black;
+}
 #page5h1 {
 	font-size: 3em;
+}
+.page3 a {
+	color: white;
+}
+.page3 a:link {
+	text-decoration: none;
+	font-size: 2em;
+	font-weight: 650;
+}
+.page3 a:hover {
+	text-decoration: none;
+	color: white;
+}
+footer a {
+	color: white;
+	display: block;
+	margin-top: 0.2em;
+}
+footer a:link {
+	font-size: 1em;
+}
+#facebook:hover {
+	color: #0866FF;
+}
+#twitter:hover {
+	color: #1A8CD8;
+}
+#instagram:hover {
+	background-image: linear-gradient(135deg, #405de6 0%, #5851db 15%, #833ab4 30%, #dd2a7b 45%, #feda77 60%);
+    background-clip: text;
+    color: transparent;
+}
+#skype:hover {
+	color: #00AAE8;
+}
+#viber:hover {
+	color: #7765F2;
+}
+#whatsapp:hover {
+	color: #40DD4F;
+}
+#calculator:hover {
+	color: #DAC0A3;
+}
+#weather:hover {
+	color: #327800;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 350px) and (max-width: 600px) {
+	.page2 {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		column-gap: 0.5em;
+		row-gap: 5em;
+	}
+	.page2 > section > img {
+		width: 80%;
+		height: 90%;
+	}
+	.page3 {
+		flex-direction: column;
+		padding-top: 10%;
+	}
+	.page3 > img {
+		flex-basis: 40%;
+		max-width: 100%;
+		max-height: 50%;
+	}
+	.page3 > section {
+		flex-basis: 60%;
+		padding-top: 5%;
+	}
+	#page3h1 {
+		font-size: 3em;
+	}
+	a:link {
+		font-size: 1.8em;
+	}
+	#page3h3 {
+		font-size: 1.3em;
+	}	
+	.productgrid {
+		width: 90%;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 25vh 25vh 25vh;
+	}
+	.description {
+		font-size: 0.6em;
+	}
+	.productdescription > span[id^="hover"] {
+		font-size: 0.6em;
+	}
+	.productdescription > h3 {
+		font-size: 0.7em;
+	}
+	.background {
+		width: 56vw;
+		max-width: 100%;
+		height: 45vh;
+		background-size: fill;
+		top: 2em;
+		left: 5em;
+	}
+	.page1 > h1 {
+		font-size: 3em;
+		margin-top: 6.5em;
+	}
+	.page1 > h2 {
+		font-size: 2em;
+	}
+	.page1 > h3 {
+		font-size: 1.5em;
+	}
+	.page1 > p {
+		font-size: 1em;
+	}
+	header > img {
+		height: 6vh;
+	}
+	.aboutgrid {
+		height: 100vh;
+		grid-template-rows: 1fr 1fr;
+		grid-template-areas: "productsslide"
+							 "about";	
+	}
+	#products {
+		width: 80vw;
+	}
+	.page6 > section > section {
+	    height: 70%;
+	    width: 80%;
+	}
+	.page6 p {
+		font-size: 1.1em;
+		padding-top: 1em;
+		padding-left: 1.5em;
+		padding-right: 1.5em;
+	}
+	.page6 img {
+		top: 65%;
+	}
+	.categorygrid {
+		grid-template-rows: 1fr 1fr;
+		grid-template-columns: 1fr;
+	}
+	.innergrid {
+		gap: 0.1em;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 0.5fr 1fr;
+		grid-template-areas: "firstvideo firstvideo"
+						 "firstvideo firstvideo"
+						 "firstproduct secondproduct";
+	}
+	.firstproduct, .secondproduct {
+		max-height: 10em;
+	}
+	.firstvideo > span {
+		font-size: 1.8em;
+		bottom: 0.5em;
+	}
+	footer {
+		text-align: left;
+		height: auto;
+		gap: 1em;
+		grid-template-rows: auto auto;
+		grid-template-columns: 36% 32% 32%;
+		grid-template-areas: "footer1 footer2 footer3"
+							 "footer4 footer4 footer4";
+		padding-top: 1em;
+	}
+	footer h2 {
+		font-size: 0.8em;
+	}
+	#footer4 {
+		margin: 0;
+		margin-bottom: 1em;
+	}
 }
