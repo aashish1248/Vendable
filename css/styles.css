@@ -42,7 +42,7 @@ div:nth-child(even) {
 	background-size: cover;
 	transform: rotate(-40deg);
 	top: 0em;
-	left: 60em;
+	left: 62%;
 	overflow-x: hidden;
 }
 .page1 {
@@ -208,20 +208,25 @@ footer h2 {
 }
 #footer4 > input {
 	border-radius: 0.3em;
-	height: 1.8em;
+	height: 2em;
 	width: 14em;
 	font-size: 1.1em;
 	font-family: "Montserrat", sans-serif;
 }
 #footer4 > button {
-	color: black;
-	background-color: white;
+	color: white;
+	background-color: black;
 	font-size: 1.1em;
-	height: 2.1em;
-	width: 6em;
+	height: 2.5em;
+	width: 8em;
 	cursor: pointer;
+	border: 3px solid white;
 	border-radius: 0.3em;
 	font-family: "Montserrat", sans-serif;
+}
+#footer4 > button:hover {
+	color: black;
+	background-color: white;
 }
 .page2 {
 	width: 100%;
@@ -241,7 +246,8 @@ footer h2 {
 	height: 100%;
 	max-width: 20em;
 	max-height: 18em;
-	border: 1px solid #D8D9DA;
+	border-top: 3px solid #D8D9DA;
+	border-left: 3px solid #D8D9DA;
 	border-radius: 0.3em;
 	box-shadow: 0.37em 0.37em 0.31em #434242;
 	background-color: white;
@@ -302,10 +308,20 @@ div:nth-child(2), div:nth-child(4), div:nth-child(8) {
 	cursor: pointer;
 	font-family: "Montserrat", sans-serif;
 	font-size: 1.1em;
+	color: white;
+	background-color: #8B8589;
 	border-radius: 0.3em;
+}
+.page3 > section > button:hover span {
+	font-size: 1.2em;
+}
+.page3 > section > button:hover {
+	background-color: white;
+	color: #8B8589;
 }
 #page4h1 {
 	padding-top: 5%;
+	color: #8B8589;
 	font-size: 2.8em;
 }
 #page7h1 {
@@ -314,6 +330,7 @@ div:nth-child(2), div:nth-child(4), div:nth-child(8) {
 }
 #page8h1 {
 	padding-top: 5%;
+	color: #8B8589;
 	font-size: 2.8em;
 }
 .productgrid {
@@ -484,6 +501,14 @@ div:nth-child(2), div:nth-child(4), div:nth-child(8) {
 	height: 100%;
 	grid-area: about;
 }
+#about > h2 {
+	font-size: 1.8em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+#about > p {
+	font-size: 1.3em;
+}
 #products {
 	max-height: 70vh;
 	width: 100%;
@@ -500,7 +525,7 @@ div:nth-child(2), div:nth-child(4), div:nth-child(8) {
 #productsdescription {
 	position: absolute;
 	left: 50%;
-	transform: translateX(-50%);	
+	transform: translateX(-50%);
 	bottom: 5%;
 	font-size: 1.5em;
 	font-weight: 500;
@@ -511,11 +536,11 @@ div:nth-child(2), div:nth-child(4), div:nth-child(8) {
 	font-size: 3em;
 }
 .page3 a {
-	color: white;
+	color: #8B8589;
 }
 .page3 a:link {
 	text-decoration: none;
-	font-size: 2em;
+	font-size: 1.6em;
 	font-weight: 650;
 }
 .page3 a:hover {
@@ -556,27 +581,7 @@ footer a:link {
 #weather:hover {
 	color: #327800;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (min-width: 350px) and (max-width: 600px) {
+@media (min-width: 350px) and (max-width: 600px) and (min-height: 800px) {
 	header {
 		position: absolute;
 	}
@@ -584,19 +589,16 @@ footer a:link {
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
 		column-gap: 0.5em;
-		row-gap: 5em;
+		row-gap: 1%;
 	}
 	.page2 > section > img {
 		width: 80%;
-		height: 90%;
+		height: 70%;
 	}
 	.page3 {
 		flex-direction: column;
 		padding-top: 10%;
-	}/*
-	.page3 > section > p {
-		font-size: 1em;
-	}*/
+	}
 	.page3 > img {
 		flex-basis: 40%;
 		max-width: 100%;
@@ -621,7 +623,7 @@ footer a:link {
 		grid-template-rows: 25vh 25vh 25vh;
 	}
 	.description {
-		font-size: 0.6em;
+		font-size: 0.5em;
 	}
 	.productdescription > span[id^="hover"] {
 		font-size: 0.6em;
@@ -630,39 +632,54 @@ footer a:link {
 		font-size: 0.7em;
 	}
 	.background {
-		width: 65vw;
+		width: 200px;
 		max-width: 100%;
-		height: 52vh;
-		background-size: fill;
+		height: 350px;
 		top: 5em;
-		left: 5.4em;
-		transform: rotate(0deg);
+		transform: rotate(270deg);
+		background-position: center center;
+		left: 32vw;
+	}
+	@media (max-width: 500px) {
+		.background {
+			left: 21.5vw
+		}
 	}
 	.page1 {
 		position: absolute;
-		top: 65%;
+		top: 45%;
 		left: 4%;
 	}
 	.page1 > h1 {
-		font-size: 2.3em;
+		font-size: 2.5em;
 	}
 	.page1 > h2 {
-		font-size: 1.8em;
+		font-size: 2em;
 	}
 	.page1 > h3 {
-		font-size: 1.4em;
+		font-size: 1.5em;
 	}
 	.page1 > p {
-		font-size: 1.2em;
+		font-size: 1.3em;
 	}
 	header > img {
 		height: 6vh;
 	}
 	.aboutgrid {
 		height: 100vh;
-		grid-template-rows: 1fr 1fr;
+		grid-template-rows: 50% 50%;
+		grid-template-columns: 1fr;
 		grid-template-areas: "productsslide"
 							 "about";	
+	}
+	#page5h1 {
+		font-size: 2em;
+	}
+	#about > h2 {
+		font-size: 1.2em;
+	}
+	#about > p {
+		font-size: 0.8em;
 	}
 	#productsslide {
 		width: 100vw;
@@ -690,7 +707,9 @@ footer a:link {
 		top: 65%;
 	}
 	.categorygrid {
+		margin-top: 5%;
 		grid-template-rows: 1fr 1fr;
+		gap: 2em;
 		grid-template-columns: 1fr;
 	}
 	.innergrid {
@@ -701,11 +720,15 @@ footer a:link {
 						 "firstvideo firstvideo"
 						 "firstproduct secondproduct";
 	}
+	.firstvideo > video {
+		max-height: 25vh;
+	}
 	.firstproduct, .secondproduct {
-		max-height: 10em;
+		max-height: 16vh;
+		max-width: 35vw;
 	}
 	.firstvideo > span {
-		font-size: 1.6em;
+		font-size: 1.4em;
 		bottom: 0.5em;
 	}
 	footer {
@@ -735,9 +758,14 @@ footer a:link {
 		height: auto;
 	}
 	.companiesdescription > p {
-		font-size: 0.7em;
+		font-size: 0.6em;
 	}
 	.companiesdescription > span {
 		font-size: 0.8em;
+	}
+	#productsdescription {
+		font-size: 0.8em;
+		left: 45%;
+		transform: translateX(-50%);
 	}
 }
