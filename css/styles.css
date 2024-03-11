@@ -24,14 +24,13 @@ div {
 }
 div > div {
 	height: 100vh;
+	overflow: hidden;
 }
 div:nth-child(odd) {
 	background-color: black;
-	overflow: hidden;
 }
 div:nth-child(even) {
 	background-color: #F5F5F7;
-	overflow: hidden;
 }
 .background {
 	position: absolute;
@@ -491,6 +490,8 @@ div:nth-child(2), div:nth-child(4), div:nth-child(8) {
 	height: 100%;
 	border-radius: 0.3em;
 	border: 1px solid black;
+	background-color: white;
+	box-shadow: 0.37em 0.37em 0.31em #434242;
 }
 #productsslide {
 	position: relative;
@@ -576,6 +577,9 @@ footer a:link {
 
 
 @media (min-width: 350px) and (max-width: 600px) {
+	header {
+		position: absolute;
+	}
 	.page2 {
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
@@ -589,7 +593,10 @@ footer a:link {
 	.page3 {
 		flex-direction: column;
 		padding-top: 10%;
-	}
+	}/*
+	.page3 > section > p {
+		font-size: 1em;
+	}*/
 	.page3 > img {
 		flex-basis: 40%;
 		max-width: 100%;
@@ -600,10 +607,10 @@ footer a:link {
 		padding-top: 5%;
 	}
 	#page3h1 {
-		font-size: 3em;
+		font-size: 2.7em;
 	}
-	a:link {
-		font-size: 1.8em;
+	.page3 a:link {
+		font-size: 1.5em;
 	}
 	#page3h3 {
 		font-size: 1.3em;
@@ -623,25 +630,30 @@ footer a:link {
 		font-size: 0.7em;
 	}
 	.background {
-		width: 56vw;
+		width: 65vw;
 		max-width: 100%;
-		height: 45vh;
+		height: 52vh;
 		background-size: fill;
-		top: 2em;
-		left: 5em;
+		top: 5em;
+		left: 5.4em;
+		transform: rotate(0deg);
+	}
+	.page1 {
+		position: absolute;
+		top: 65%;
+		left: 4%;
 	}
 	.page1 > h1 {
-		font-size: 3em;
-		margin-top: 6.5em;
+		font-size: 2.3em;
 	}
 	.page1 > h2 {
-		font-size: 2em;
+		font-size: 1.8em;
 	}
 	.page1 > h3 {
-		font-size: 1.5em;
+		font-size: 1.4em;
 	}
 	.page1 > p {
-		font-size: 1em;
+		font-size: 1.2em;
 	}
 	header > img {
 		height: 6vh;
@@ -652,15 +664,24 @@ footer a:link {
 		grid-template-areas: "productsslide"
 							 "about";	
 	}
+	#productsslide {
+		width: 100vw;
+	}
 	#products {
-		width: 80vw;
+		width: 90%;
+	}
+	#about {
+		width: 90%;
 	}
 	.page6 > section > section {
 	    height: 70%;
 	    width: 80%;
 	}
+	.page6 > h1 {
+		font-size: 2em;
+	}
 	.page6 p {
-		font-size: 1.1em;
+		font-size: 1em;
 		padding-top: 1em;
 		padding-left: 1.5em;
 		padding-right: 1.5em;
@@ -684,7 +705,7 @@ footer a:link {
 		max-height: 10em;
 	}
 	.firstvideo > span {
-		font-size: 1.8em;
+		font-size: 1.6em;
 		bottom: 0.5em;
 	}
 	footer {
@@ -703,5 +724,20 @@ footer a:link {
 	#footer4 {
 		margin: 0;
 		margin-bottom: 1em;
+	}
+	.companiesgrid {
+		height: auto;
+		gap: 0.5em;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr 1fr;
+	}
+	div:nth-child(8) {
+		height: auto;
+	}
+	.companiesdescription > p {
+		font-size: 0.7em;
+	}
+	.companiesdescription > span {
+		font-size: 0.8em;
 	}
 }

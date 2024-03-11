@@ -153,8 +153,8 @@ product6.addEventListener("mouseleave", () => {
 	hover6.style.display = "inline-block";
 })
 
-var productssource = ["pic1.jpg", "pic2.jpg", "pic3.jpg", "pic4.jpg", "pic5.jpg"];
-var productsdescriptions = ["Echo Dot 3rd Generation", "Battery Doorbell Pro", "Casio FX-300ES Plus", "Digital Alarm Clock", "PS5 Standard Edition"];
+var productssource = ["pic1.png", "pic2.png", "pic3.png", "pic4.png"];
+var productsdescriptions = ["Echo Dot 3rd Generation", "Battery Doorbell Pro", "Digital Alarm Clock", "Hamilton Beach 2 Toaster"];
 var x = 1;
 const products = document.getElementById("products");
 const descriptions = document.getElementById("productsdescription");
