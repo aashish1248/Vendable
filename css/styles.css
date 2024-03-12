@@ -800,4 +800,65 @@ footer a:link {
 		width: 70%;
 		height: 60%;
 	}
+	.page3 {
+		flex-direction: column;
+		padding-top: 5%;
+	}
+	.page3 > img {
+		flex-basis: 40%;
+		max-width: 100%;
+		max-height: 50%;
+	}
+	.page3 > section {
+		flex-basis: 60%;
+		padding-top: 2%;
+	}
+	#page3h1 {
+		font-size: 2.7em;
+	}
+	.page3 a:link {
+		font-size: 1.5em;
+	}
+	#page3h3 {
+		font-size: 1.3em;
+	}	
+	.description {
+		font-size: 0.6em;
+	}
+	.productdescription > span[id^="hover"] {
+		font-size: 0.6em;
+	}
+	.productdescription > h3 {
+		font-size: 0.8em;
+	}
+	.aboutgrid {
+		height: 100vh;
+		grid-template-rows: 50% 50%;
+		grid-template-columns: 1fr;
+		grid-template-areas: "productsslide"
+							 "about";	
+	}
+	#page5h1 {
+		font-size: 2em;
+	}
+	#about > h2 {
+		font-size: 1.2em;
+	}
+	#about > p {
+		font-size: 1em;
+	}
+	#productsslide {
+		width: 100vw;
+	}
+	#products {
+		width: 90%;
+	}
+	#about {
+		width: 90%;
+	}
+	#productsdescription {
+		font-size: 1.4em;
+		left: 45%;
+		transform: translateX(-50%);
+	}
 }
