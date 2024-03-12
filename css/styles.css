@@ -790,6 +790,9 @@ footer a:link {
 	.page1 > p {
 		font-size: 1.5em;
 	}
+	#page2h1 {
+		padding-top: 3%;
+	}
 	.page2 {
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
@@ -899,7 +902,7 @@ footer a:link {
 		margin-bottom: 1em;
 	}
 	.categorygrid {
-		margin-top: 5%;
+		margin-top: 2%;
 		grid-template-rows: 1fr 1fr;
 		gap: 2em;
 		grid-template-columns: 1fr;
@@ -946,6 +949,12 @@ footer a:link {
 	}	
 }
 @media (min-width: 1001px) and (max-width: 1400px) {
+	header {
+		position: absolute;
+	}
+	.page2 {
+		padding-top: 8%;
+	}
 	.page2 > section > img {
 		width: 90%;
 		height: 100%;
@@ -969,9 +978,13 @@ footer a:link {
 	.page6 p {
 		font-size: 1.1em;
 	}
+	.categorygrid {
+		padding-top: 8%;
+		gap: 0.5em;
+	}
 	.innergrid {
 		gap: 0.5em;
-		grid-template-columns: 13em 13em;
+		grid-template-columns: auto auto;
 		grid-template-rows: 12em 12em 12em;
 	}
 	.firstvideo > span {
