@@ -390,7 +390,7 @@ div:nth-child(2), div:nth-child(4), div:nth-child(8) {
 	border: 1px solid black;
 	border-radius: 0.3em;
 }
-.companiesgrid .companiesdescription {
+.companiesdescription {
 	margin: auto;
 	position: relative;
 	height: 32%;
@@ -636,14 +636,9 @@ footer a:link {
 		max-width: 100%;
 		height: 350px;
 		top: 5em;
-		transform: rotate(270deg);
+		left: 50%;
+		transform: translateX(-50%) rotate(270deg);
 		background-position: center center;
-		left: 32vw;
-	}
-	@media (max-width: 500px) {
-		.background {
-			left: 21.5vw
-		}
 	}
 	.page1 {
 		position: absolute;
@@ -769,10 +764,14 @@ footer a:link {
 		transform: translateX(-50%);
 	}
 }
-@media (min-width: 600px) and (max-width: 1000px) {
+@media (min-width: 601px) and (max-width: 1000px) {
+	header {
+		position: absolute;
+	}
 	.background {
 		top: 3em;
-		left: 20em;
+		left: 50%;
+		transform: translateX(-50%) rotate(-40deg);
 		width: 18em;
 		height: 30em;
 	}
@@ -861,4 +860,88 @@ footer a:link {
 		left: 45%;
 		transform: translateX(-50%);
 	}
+	.page6 > section > section {
+	    height: 60%;
+	    width: 50%;
+	}
+	.page6 > h1 {
+		font-size: 2em;
+	}
+	.page6 p {
+		font-size: 0.9em;
+		padding-top: 1em;
+		padding-left: 1.5em;
+		padding-right: 1.5em;
+	}
+	.page6 img {
+		top: 60%;
+	}
+	@media (min-width: 800px) and (max-width: 1000px) {
+		.page6 p {
+			font-size: 1.1em;
+		}
+	}
+	footer {
+		text-align: left;
+		height: auto;
+		gap: 1em;
+		grid-template-rows: auto auto;
+		grid-template-columns: 36% 32% 32%;
+		grid-template-areas: "footer1 footer2 footer3"
+							 "footer4 footer4 footer4";
+		padding-top: 1em;
+	}
+	footer h2 {
+		font-size: 0.8em;
+	}
+	#footer4 {
+		margin: 0;
+		margin-bottom: 1em;
+	}
+	.categorygrid {
+		margin-top: 5%;
+		grid-template-rows: 1fr 1fr;
+		gap: 2em;
+		grid-template-columns: 1fr;
+	}
+	.innergrid {
+		gap: 0.1em;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 0.5fr 1fr;
+		grid-template-areas: "firstvideo firstvideo"
+						 "firstvideo firstvideo"
+						 "firstproduct secondproduct";
+	}
+	.firstvideo > video {
+		max-height: 25vh;
+	}
+	.firstproduct, .secondproduct {
+		max-height: 16vh;
+		max-width: 35vw;
+	}
+	.firstvideo > span {
+		font-size: 1.4em;
+		bottom: 0.5em;
+	}
+	.companiesgrid {
+		gap: 0.5em;
+		width: 90%;
+	}
+	.companiesgrid img {
+		height: 80%;
+	}
+	.companiesdescription {
+		height: 55%;
+	}
+	@media (min-width: 800px) and (max-width: 1000px) {
+		.companiesdescription {
+			height: 40%;
+		}
+	}
+	.companiesdescription > p {
+		font-size: 0.7em;
+	}
+	.companiesdescription > span {
+		font-size: 0.8em;
+	}	
 }
