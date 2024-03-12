@@ -581,6 +581,10 @@ footer a:link {
 #weather:hover {
 	color: #327800;
 }
+.firstvideo:hover, .firstproduct:hover, .secondproduct:hover {
+	filter: brightness(50%);
+	cursor: pointer;
+}
 @media (min-width: 350px) and (max-width: 600px) {
 	header {
 		position: absolute;
@@ -951,6 +955,14 @@ footer a:link {
 @media (min-width: 1001px) and (max-width: 1400px) {
 	header {
 		position: absolute;
+	}
+	.background {
+		max-width: 100%;
+		width: 30em;
+		height: 50em;
+		left: 50%;
+		transform: translateX(-50%) rotate(-40deg);
+		filter: blur(5px) brightness(50%);
 	}
 	.page2 {
 		padding-top: 8%;

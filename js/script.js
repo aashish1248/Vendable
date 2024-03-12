@@ -168,3 +168,19 @@ const productsslide = () => {
 	}
 }
 setInterval(productsslide,3000);
+
+const firstvideo = document.querySelectorAll(".firstvideo");
+const firstproduct = document.querySelectorAll(".firstproduct");
+const secondproduct = document.querySelectorAll(".secondproduct");
+firstvideo.forEach(video => {
+	video.addEventListener("click", () => {
+	window.location.href = "./soon.html";
+})})
+firstproduct.forEach(product => {
+	product.addEventListener("click", () => {
+	window.location.href = "./soon.html";
+})})
+secondproduct.forEach(product => {
+	product.addEventListener("click", () => {
+	window.location.href = "./soon.html";
+})})
