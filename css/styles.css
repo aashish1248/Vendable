@@ -34,15 +34,15 @@ div:nth-child(even) {
 }
 .background {
 	position: absolute;
-	width: 25vw;
-	height: 94vh;
+	width: 24em;
+	height: 40em;
 	z-index: 0;
 	background-image: url("../images/phone.png");
 	background-repeat: no-repeat;
 	background-size: cover;
-	transform: rotate(-40deg);
-	top: 0em;
-	left: 62%;
+	transform: translateY(-50%) rotate(-40deg);
+	top: 50%;
+	right: 12%;
 	overflow-x: hidden;
 }
 .page1 {
@@ -641,8 +641,8 @@ footer a:link {
 		height: 350px;
 		top: 5em;
 		left: 50%;
+		right: auto;
 		transform: translateX(-50%) rotate(270deg);
-		background-position: center center;
 	}
 	.page1 {
 		position: absolute;
@@ -775,6 +775,7 @@ footer a:link {
 	.background {
 		top: 3em;
 		left: 50%;
+		right: auto;
 		transform: translateX(-50%) rotate(-40deg);
 		width: 18em;
 		height: 30em;
@@ -960,6 +961,8 @@ footer a:link {
 		max-width: 100%;
 		width: 30em;
 		height: 50em;
+		right: auto;
+		top: 0em;
 		left: 50%;
 		transform: translateX(-50%) rotate(-40deg);
 		filter: blur(5px) brightness(50%);
